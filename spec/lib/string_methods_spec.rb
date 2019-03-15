@@ -16,7 +16,7 @@ describe "#reverse_array" do
   end
 end
 
-describe "#reverse_array" do 
+describe "#reverse" do 
   describe "Example 1" do
     it "returns reversed string" do 
       string = "hello"
@@ -29,4 +29,28 @@ describe "#reverse_array" do
       expect(reverse(string)).to eq("hannaH")
     end
   end
+end
+
+describe "#reverse_integer" do 
+  describe "Example 1" do
+    it "returns reversed integer" do 
+      num = 123
+      expect(reverse_integer(num)).to eq(321)
+    end
+  end
+
+  describe "Example 2" do
+    it "returns reversed integer" do 
+      num = -123
+      expect(reverse_integer(num)).to eq(-321)
+    end
+  end
+
+  describe "Example 3" do
+    it "returns reversed integer" do 
+      num = 120
+      expect(reverse_integer(num)).to eq(12)
+    end
+  end
+
 end
