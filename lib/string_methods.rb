@@ -49,3 +49,16 @@ def reverse(s)
   end
   output.join('')
 end
+
+def reverse_integer(x)
+  arr = x.to_s.split('')
+  if arr[0] == "-"
+    arr.shift
+    arr.reverse!
+    arr.unshift("-")
+    return arr.join('').to_i
+  else
+    arr.reverse!
+    return arr.join('').to_i
+  end
+end
