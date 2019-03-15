@@ -51,14 +51,23 @@ def reverse(s)
 end
 
 def reverse_integer(x)
+  # Assume we are dealing with an environment 
+  # which could only store integers within 
+  # the 32-bit signed integer range
+  # if the answer overflows, return 0
+  # −2,147,483,648 to 2,147,483,647
+
   arr = x.to_s.split('')
   if arr[0] == "-"
     arr.shift
     arr.reverse!
     arr.unshift("-")
-    return arr.join('').to_i
+    rev_num = arr.join('').to_i
+    return rev_num unless "−2147483648".to_i < rev_num
   else
     arr.reverse!
-    return arr.join('').to_i
+    rev_num = arr.join('').to_i
+    return rev_num unless rev_num > 2147483647
   end
+  0
 end
