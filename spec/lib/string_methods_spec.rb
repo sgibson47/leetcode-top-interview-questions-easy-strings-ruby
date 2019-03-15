@@ -49,7 +49,7 @@ describe "#reverse_integer" do
   describe "Example 3" do
     it "returns reversed integer" do 
       num = 120
-      expect(reverse_integer(num)).to eq(12)
+      expect(reverse_integer(num)).to eq(21)
     end
   end
 
