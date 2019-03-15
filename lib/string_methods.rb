@@ -1,3 +1,5 @@
+require 'pry'
+
 def reverse_array(s)
   #s.reverse!
   
@@ -63,7 +65,8 @@ def reverse_integer(x)
     arr.reverse!
     arr.unshift("-")
     rev_num = arr.join('').to_i
-    return rev_num unless "−2147483648".to_i < rev_num
+    # binding.pry
+    return rev_num unless -2147483648 > rev_num
   else
     arr.reverse!
     rev_num = arr.join('').to_i
