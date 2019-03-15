@@ -1,5 +1,5 @@
 require 'spec_helper'
-require '/Users/samanthagibson/Development/code/leetcode-top-interview-questions-strings-easy-ruby/lib/string_methods.rb'
+require '/Users/samanthagibson/Development/code/leetcode-top-interview-questions-easy-strings-ruby/lib/string_methods.rb'
 
 describe "#reverse" do 
   describe "Example 1" do
