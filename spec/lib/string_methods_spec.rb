@@ -60,7 +60,7 @@ describe "#reverse_integer" do
     end
   end
 
-  describe "Example 4" do
+  describe "Example 5" do
     it "returns reversed integer" do 
       num = -2147483648
       expect(reverse_integer(num)).to eq(0)
