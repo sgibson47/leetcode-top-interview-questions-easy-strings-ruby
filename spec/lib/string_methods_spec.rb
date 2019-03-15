@@ -15,3 +15,18 @@ describe "#reverse_array" do
     end
   end
 end
+
+describe "#reverse_array" do 
+  describe "Example 1" do
+    it "returns reversed string" do 
+      string = "hello"
+      expect(reverse(string)).to eq("olleh")
+    end
+  end
+  describe "Example 2" do
+    it "returns reversed string" do 
+      string = "Hannah"
+      expect(reverse(string)).to eq("hannaH")
+    end
+  end
+end
