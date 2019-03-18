@@ -76,15 +76,41 @@ def reverse_integer(x)
 end
 
 def first_uniq_char(s)
-  array = s.chars
-  i = 0
-  dict = {}
-  while i <= s.length-1
-    copy = array.slice(0,i).concat(array.slice(i+1, array.length))
-    if !copy.include?(array[i])
-      return i 
+  # accurate, but too slow:
+  # array = s.chars
+  # i = 0
+  # while i <= s.length-1
+  #   copy = array.slice(0,i).concat(array.slice(i+1, array.length))
+  #   if !copy.include?(array[i])
+  #     return i 
+  #   end
+  #   i +=1
+  # end
+  # -1
+
+  # fast enough to pass all leetcode tests
+  # Runtime: 280 ms
+  # Memory Usage: 10.6 MB
+  dict ={}
+
+  j = 0
+
+  s.each_char do |char|
+    if !!dict[char]
+      dict[char] +=1
+    else
+      dict[char] =1
     end
-    i +=1
   end
+
+  s.each_char do |char|
+    if dict[char] ==1
+      return j
+    end
+    j+=1
+  end
+
   -1
+
+  
 end
