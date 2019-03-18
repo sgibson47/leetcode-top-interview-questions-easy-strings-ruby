@@ -75,4 +75,16 @@ def reverse_integer(x)
   0
 end
 
-
+def first_uniq_char(s)
+  array = s.chars
+  i = 0
+  dict = {}
+  while i <= s.length-1
+    copy = array.slice(0,i).concat(array.slice(i+1, array.length))
+    if !copy.include?(array[i])
+      return i 
+    end
+    i +=1
+  end
+  -1
+end
