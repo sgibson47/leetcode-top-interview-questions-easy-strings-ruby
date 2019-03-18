@@ -159,7 +159,7 @@ def my_atoi(str)
     return num
   elsif str[0].to_i == 0 && str[0] == "+"
     str[0] = ""
-    num = str.gsub(/[^0-9]\w/, '').to_i
+    num = str.gsub(/[^0-9]\w*/, '').to_i
     return 2147483647 if num > 2147483647
     return num
   else

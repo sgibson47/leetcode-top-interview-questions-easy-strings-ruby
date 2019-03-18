@@ -201,4 +201,11 @@ describe "strin to integer #my_atoi" do
     end
   end
 
+  describe "Example 9" do
+    it "stops considering integers after a space" do 
+      s = "   +0 123"
+      expect(my_atoi(s)).to eq(0)
+    end
+  end
+
 end
