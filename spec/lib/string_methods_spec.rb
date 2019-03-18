@@ -68,3 +68,26 @@ describe "#reverse_integer" do
   end
 
 end
+
+describe "#first_uniq_char" do 
+  describe "Example 1" do
+    it "returns the index of the first non-repeating character" do 
+      s = "leetcode"
+      expect(first_uniq_char(s)).to eq(0)
+    end
+  ends
+
+  describe "Example 2" do
+    it "returns the index of the first non-repeating character" do 
+      s = "loveleetcode"
+      expect(first_uniq_char(s)).to eq(1)
+    end
+  end
+
+  describe "Example 3" do
+    it "returns the index of the first non-repeating character" do 
+      s = "asdfghjkl"
+      expect(first_uniq_char(s)).to eq(-1)
+    end
+  end
+end
