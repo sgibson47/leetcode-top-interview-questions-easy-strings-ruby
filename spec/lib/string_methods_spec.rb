@@ -180,4 +180,11 @@ describe "strin to integer #my_atoi" do
     end
   end
 
+  describe "Example 6" do
+    it "stops considering integers after a non-numerical character" do 
+      s = "3.14159"
+      expect(my_atoi(s)).to eq(3)
+    end
+  end
+
 end
