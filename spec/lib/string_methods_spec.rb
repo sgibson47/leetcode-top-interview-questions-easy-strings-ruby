@@ -91,3 +91,24 @@ describe "#first_uniq_char" do
     end
   end
 end
+
+
+
+describe "#is_anagram" do 
+  describe "Example 1" do
+    it "returns whether t is an anagram of s" do 
+      s = "anagram"
+      t = "nagaram"
+      expect(is_anagram(s, t)).to eq(true)
+    end
+  end
+
+  describe "Example 2" do
+    it "returns whether t is an anagram of s" do 
+      s = "rat"
+      t = "car"
+      expect(is_anagram(s, t)).to eq(false)
+    end
+  end
+end
+
