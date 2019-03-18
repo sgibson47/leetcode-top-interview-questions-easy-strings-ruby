@@ -155,14 +155,14 @@ describe "strin to integer #my_atoi" do
   describe "Example 2" do
     it "returns integer" do 
       s = "   -42"
-      expect(my_atoi(s)).to eq(-342)
+      expect(my_atoi(s)).to eq(-42)
     end
   end
 
   describe "Example 3" do
     it "conversion stops when the next character is not a numerical digit" do 
       s = "4193 with words"
-      expect(my_atoi(s)).to eq(4139)
+      expect(my_atoi(s)).to eq(4193)
     end
   end
 

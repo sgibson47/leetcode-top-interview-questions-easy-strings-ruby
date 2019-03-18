@@ -146,3 +146,22 @@ def is_palindrome(s)
   new_s == new_s.reverse ? true : false
 end
 
+def my_atoi(str)
+  # if the answer overflows, return max or min
+  # −2,147,483,648 to 2,147,483,647 
+
+  str.delete!(" ")
+  if str[0].to_i == 0 && str[0] != "-"
+    return 0
+  elsif str[0].to_i == 0 && str[0] == "-"
+    num = str.gsub(/[^0-9]"-"/, '').to_i
+    return -2147483648 if -2147483648 > num
+    return num
+  else
+    num = str.gsub(/[^0-9]/, '').to_i
+    return 2147483647 if num > 2147483647
+    return num
+  end
+
+end
+
