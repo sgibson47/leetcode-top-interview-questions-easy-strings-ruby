@@ -108,3 +108,16 @@ def first_uniq_char(s)
 
   -1
 end
+
+def is_anagram(s, t)
+  s_dict = Hash.new(0)
+  t_dict = Hash.new(0)
+
+  s.each_char {|char| s_dict[char] +=1 }
+  t.each_char {|char| t_dict[char] +=1 }
+
+  t_dict.each {|key, value| s_dict[key] == value ? (next) : (return false) }
+
+  true
+
+end
