@@ -188,9 +188,16 @@ describe "strin to integer #my_atoi" do
   end
 
   describe "Example 7" do
-    it "returns integer" do 
+    it "handles +" do 
       s = "+1"
       expect(my_atoi(s)).to eq(1)
+    end
+  end
+
+  describe "Example 8" do
+    it "handles first non space = 0" do 
+      s = "  0000000000012345678"
+      expect(my_atoi(s)).to eq(12345678)
     end
   end
 
