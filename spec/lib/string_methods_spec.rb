@@ -75,18 +75,18 @@ describe "#first_uniq_char" do
       s = "leetcode"
       expect(first_uniq_char(s)).to eq(0)
     end
-  ends
+  end
 
   describe "Example 2" do
     it "returns the index of the first non-repeating character" do 
       s = "loveleetcode"
-      expect(first_uniq_char(s)).to eq(1)
+      expect(first_uniq_char(s)).to eq(2)
     end
   end
 
   describe "Example 3" do
     it "returns the index of the first non-repeating character" do 
-      s = "asdfghjkl"
+      s = "aaaaaaaaa"
       expect(first_uniq_char(s)).to eq(-1)
     end
   end
