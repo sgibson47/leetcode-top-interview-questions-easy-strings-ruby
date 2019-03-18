@@ -154,11 +154,11 @@ def my_atoi(str)
   if str[0].to_i == 0 && str[0] != "-"
     return 0
   elsif str[0].to_i == 0 && str[0] == "-"
-    num = str.gsub(/[^0-9]"-"/, '').to_i
+    num = str.gsub(/[^0-9]"-"^0-9]\w*/, '').to_i
     return -2147483648 if -2147483648 > num
     return num
   else
-    num = str.gsub(/[^0-9]/, '').to_i
+    num = str.gsub(/[^0-9]^0-9]\w*/, '').to_i
     return 2147483647 if num > 2147483647
     return num
   end
