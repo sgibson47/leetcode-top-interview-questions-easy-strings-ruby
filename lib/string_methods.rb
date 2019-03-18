@@ -124,3 +124,17 @@ def is_anagram(s, t)
   s_dict == t_dict ? (return true) : (return false)
 
 end
+
+def is_palindrome(s)
+  return true if s == ""
+  new_s = s.gsub(/[^A-Za-z0-9]/, '').downcase
+  i = 0 
+  while i < (new_s.length/2)
+    if new_s[i] != new_s[new_s.length - 1 - i]
+      return false 
+    end
+    i += 1
+  end
+  true
+end
+
