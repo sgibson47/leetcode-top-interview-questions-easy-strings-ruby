@@ -89,18 +89,14 @@ def first_uniq_char(s)
   # -1
 
   # fast enough to pass all leetcode tests
-  # Runtime: 280 ms
-  # Memory Usage: 10.6 MB
-  dict ={}
+  # Runtime: 232 ms
+  # Memory Usage: 10.4 MB
+  dict = Hash.new(0)
 
   j = 0
 
   s.each_char do |char|
-    if !!dict[char]
-      dict[char] +=1
-    else
-      dict[char] =1
-    end
+    dict[char] +=1
   end
 
   s.each_char do |char|
@@ -111,6 +107,4 @@ def first_uniq_char(s)
   end
 
   -1
-
-  
 end
