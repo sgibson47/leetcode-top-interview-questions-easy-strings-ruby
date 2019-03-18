@@ -187,4 +187,11 @@ describe "strin to integer #my_atoi" do
     end
   end
 
+  describe "Example 7" do
+    it "returns integer" do 
+      s = "+1"
+      expect(my_atoi(s)).to eq(1)
+    end
+  end
+
 end
