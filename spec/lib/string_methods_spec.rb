@@ -118,7 +118,28 @@ describe "#is_anagram" do
       expect(is_anagram(s, t)).to eq(false)
     end
   end
-
-
 end
 
+
+describe "#is_palindrome" do 
+  describe "Example 1" do
+    it "returns whether s is a palindrome" do 
+      s = "A man, a plan, a canal: Panama"
+      expect(is_palindrome(s)).to eq(true)
+    end
+  end
+
+  describe "Example 2" do
+    it "returns whether t is an anagram of s" do 
+      s = "race a car"
+      expect(is_palindrome(s)).to eq(false)
+    end
+  end
+
+  describe "Example 1" do
+    it "returns whether t is an anagram of s" do 
+      s = ""
+      expect(is_palindrome(s)).to eq(true)
+    end
+  end
+end

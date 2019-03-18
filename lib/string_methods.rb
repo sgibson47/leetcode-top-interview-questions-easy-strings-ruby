@@ -118,8 +118,9 @@ def is_anagram(s, t)
   s.each_char {|char| s_dict[char] +=1 }
   t.each_char {|char| t_dict[char] +=1 }
 
-  t_dict.each {|key, value| s_dict[key] == value ? (next) : (return false) }
+  # t_dict.each {|key, value| s_dict[key] == value ? (next) : (return false) 
+  # true
 
-  true
+  s_dict == t_dict ? (return true) : (return false)
 
 end
