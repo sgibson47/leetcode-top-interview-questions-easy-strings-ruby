@@ -150,7 +150,7 @@ def my_atoi(str)
   # if the answer overflows, return max or min
   # −2,147,483,648 to 2,147,483,647 
 
-  str.delete!(" ")
+  str.strip!
   if str[0].to_i == 0 && str[0] != "-" && str[0] != "+" && str[0] != "0"
     return 0
   elsif str[0].to_i == 0 && str[0] == "-"
