@@ -110,5 +110,15 @@ describe "#is_anagram" do
       expect(is_anagram(s, t)).to eq(false)
     end
   end
+
+  describe "Example 3" do
+    it "returns whether t is an anagram of s" do 
+      s = "ab"
+      t = "a"
+      expect(is_anagram(s, t)).to eq(false)
+    end
+  end
+
+
 end
 
