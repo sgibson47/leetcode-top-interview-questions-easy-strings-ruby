@@ -126,15 +126,23 @@ def is_anagram(s, t)
 end
 
 def is_palindrome(s)
+  # Runtime: 72 ms
+  # Memory Usage: 10.2 MB
+  # return true if s == ""
+  # new_s = s.gsub(/[^A-Za-z0-9]/, '').downcase
+  # i = 0 
+  # while i < (new_s.length/2)
+  #   if new_s[i] != new_s[new_s.length - 1 - i]
+  #     return false 
+  #   end
+  #   i += 1
+  # end
+  # true
+
+  # Runtime: 48 ms
+  # Memory Usage: 10.7 MB
   return true if s == ""
-  new_s = s.gsub(/[^A-Za-z0-9]/, '').downcase
-  i = 0 
-  while i < (new_s.length/2)
-    if new_s[i] != new_s[new_s.length - 1 - i]
-      return false 
-    end
-    i += 1
-  end
-  true
+  new_s = s.downcase.gsub(/[^[:word:]\s]/, '').delete(" ")
+  new_s == new_s.reverse ? true : false
 end
 
