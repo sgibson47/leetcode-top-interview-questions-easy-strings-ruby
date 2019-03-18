@@ -143,3 +143,41 @@ describe "#is_palindrome" do
     end
   end
 end
+
+describe "strin to integer #my_atoi" do 
+  describe "Example 1" do
+    it "returns integer" do 
+      s = "42"
+      expect(my_atoi(s)).to eq(42)
+    end
+  end
+
+  describe "Example 2" do
+    it "returns integer" do 
+      s = "   -42"
+      expect(my_atoi(s)).to eq(-342)
+    end
+  end
+
+  describe "Example 3" do
+    it "conversion stops when the next character is not a numerical digit" do 
+      s = "4193 with words"
+      expect(my_atoi(s)).to eq(4139)
+    end
+  end
+
+  describe "Example 4" do
+    it "first non-whitespace character is non-numerical, return 0" do 
+      s = "words and 987"
+      expect(my_atoi(s)).to eq(0)
+    end
+  end
+
+  describe "Example 5" do
+    it "'-91283472332' is out of the range, so INT_MIN (−231) is returned" do 
+      s = "-91283472332"
+      expect(my_atoi(s)).to eq(-2147483648)
+    end
+  end
+
+end
