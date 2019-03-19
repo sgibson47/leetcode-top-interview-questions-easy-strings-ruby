@@ -206,3 +206,7 @@ def str_str(haystack, needle)
   return -1
 end
 
+def count_and_say(n)
+    
+end
+
