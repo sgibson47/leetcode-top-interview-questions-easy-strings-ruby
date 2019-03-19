@@ -235,3 +235,40 @@ describe "#str_str" do
     end
   end
 end
+
+describe "#count_and_say" do 
+  describe "Example 1" do
+    it "returns a string of the nth term of the count-and-say sequence" do 
+      n = 1
+      expect(count_and_say(n)).to eq("1")
+    end
+  end
+
+  describe "Example 2" do
+    it "returns a string of the nth term of the count-and-say sequence" do 
+      n = 2
+      expect(count_and_say(n)).to eq("11")
+    end
+  end
+
+  describe "Example 3" do
+    it "returns a string of the nth term of the count-and-say sequence" do 
+      n = 3
+      expect(count_and_say(n)).to eq("21")
+    end
+  end
+
+  describe "Example 4" do
+    it "returns a string of the nth term of the count-and-say sequence" do 
+      n = 4
+      expect(count_and_say(n)).to eq("1211")
+    end
+  end
+
+  describe "Example 5" do
+    it "returns a string of the nth term of the count-and-say sequence" do 
+      n = 5
+      expect(count_and_say(n)).to eq("111221")
+    end
+  end
+end
