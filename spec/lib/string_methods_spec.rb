@@ -226,4 +226,12 @@ describe "#str_str" do
       expect(str_str(haystack, needle)).to eq(-1)
     end
   end
+
+  describe "Example 3" do
+    it "returns 0 if needle is an empty string" do 
+      haystack = "aaaaa"
+      needle = ""
+      expect(str_str(haystack, needle)).to eq(0)
+    end
+  end
 end
