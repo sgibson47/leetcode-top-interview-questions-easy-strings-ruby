@@ -212,7 +212,7 @@ end
 
 def say(last)
   i = 0 
-  j = 0
+  j = 1
   result = ""
   while i <= last.length - 1
     if i == last.length - 1
