@@ -272,3 +272,33 @@ describe "#count_and_say" do
     end
   end
 end
+
+describe "#say" do 
+  describe "Example 1" do
+    it "returns a string counting & saying its argument" do 
+      last  = "1"
+      expect(say(last)).to eq("11")
+    end
+  end
+
+  describe "Example 2" do
+    it "returns a string counting & saying its argument" do 
+      last  = "11"
+      expect(say(last)).to eq("21")
+    end
+  end
+
+  describe "Example 3" do
+    it "returns a string counting & saying its argument" do 
+      last  = "21"
+      expect(say(last)).to eq("1211")
+    end
+  end
+
+  describe "Example 4" do
+    it "returns a string counting & saying its argument" do 
+      last  = "1211"
+      expect(say(last)).to eq("111221")
+    end
+  end
+end
