@@ -209,3 +209,21 @@ describe "strin to integer #my_atoi" do
   end
 
 end
+
+describe "#str_str" do 
+  describe "Example 1" do
+    it "returns the first index of the needle in the haystack" do 
+      haystack = "hello"
+      needle = "ll"
+      expect(str_str(haystack, needle)).to eq(2)
+    end
+  end
+
+  describe "Example 2" do
+    it "returns -1 if needle is not in the haystack" do 
+      haystack = "aaaaa"
+      needle = "bba"
+      expect(str_str(haystack, needle)).to eq(-1)
+    end
+  end
+end
