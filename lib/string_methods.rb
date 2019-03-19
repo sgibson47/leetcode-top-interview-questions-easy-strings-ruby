@@ -170,3 +170,11 @@ def my_atoi(str)
 
 end
 
+def str_str(haystack, needle)
+  return 0 if needle ==""
+  return -1 unless haystack.include?(needle)
+
+  haystack.index(needle)
+
+end
+
