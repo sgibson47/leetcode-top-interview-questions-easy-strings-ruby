@@ -171,10 +171,38 @@ def my_atoi(str)
 end
 
 def str_str(haystack, needle)
-  return 0 if needle ==""
-  return -1 unless haystack.include?(needle)
+  # return 0 if needle ==""
+  # return -1 unless haystack.include?(needle)
 
-  haystack.index(needle)
+  # haystack.index(needle)
 
+
+  return 0 if needle.empty?
+  
+  # instantiate a counter that will keeep track of
+  # the index of haystack at which we'll begin comparing
+  # haystack & needle
+  start = 0
+  
+  # only perform comparison when remainder of haystack 
+  # could possibly hold needle
+  # i.e. when there are as may character left in haystack
+  # after start as there are in needle
+  while start + needle.length-1 <= haystack.length-1
+    # compare a substring of haystack from index start
+    # to index of start + highest index of needle 
+    # with needle
+    if haystack[start..start + needle.length - 1] == needle
+      # if the substring & needle match
+      # return start
+      return start
+    end
+    
+    # increment start to examine a new substring of haystack
+    start += 1
+  end
+  
+  # if earlier returns aren't triggered, needle isn't in haystack
+  return -1
 end
 
