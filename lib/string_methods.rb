@@ -210,3 +210,19 @@ def count_and_say(n)
     
 end
 
+def say(last)
+  i = 0 
+  j = 0
+  result = ""
+  while i <= last.length - 1
+    if i == last.length - 1
+      result += (j.to_s + last[i])
+    elsif last[i] != last[i+1]
+      result += (j.to_s + last[i])
+      j = 0
+    end
+    j += 1
+    i += 1
+  end
+  result
+end
