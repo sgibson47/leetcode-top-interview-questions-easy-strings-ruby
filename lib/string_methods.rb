@@ -210,10 +210,11 @@ def count_and_say(n)
   # now we can get the result if we has the result of n-1
   # make some kind of recursive call?
   if n > 1
-    count_and_say(n - 1) #recursive call
+    last = count_and_say(n - 1) #recursive call
   else
     return "1" # base case
   end
+  say(last)
 end
 
 def say(last)
