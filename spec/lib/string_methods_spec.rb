@@ -302,3 +302,19 @@ describe "#say" do
     end
   end
 end
+
+describe "#longest_common_prefix" do 
+  describe "Example 1" do
+    it "returns the longest common prefix string amongst an array of strings" do 
+      strs = ["flower","flow","flight"]
+      expect(longest_common_prefix(strs)).to eq("fl")
+    end
+  end
+
+  describe "Example 2" do
+    it "returns '' if there is no common prefix" do 
+      strs = [["dog","racecar","car"]
+      expect(longest_common_prefix(last)).to eq("")
+    end
+  end
+end
