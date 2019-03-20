@@ -317,4 +317,11 @@ describe "#longest_common_prefix" do
       expect(longest_common_prefix(strs)).to eq("")
     end
   end
+
+  describe "Example 3" do
+    it "returns '' if sts is empty" do 
+      strs = []
+      expect(longest_common_prefix(strs)).to eq("")
+    end
+  end
 end
