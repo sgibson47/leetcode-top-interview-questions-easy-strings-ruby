@@ -238,6 +238,7 @@ def longest_common_prefix(strs)
   # need a way to compare characters in all the strings
   # for matching
   result = ""
+  return result if strs == []
   dict = Hash.new(0)
   strs[0].chars.each_with_index do |char, i|
     dict[i] = {char => 0}
