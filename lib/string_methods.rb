@@ -233,3 +233,32 @@ def say(last)
   end
   result
 end
+
+def longest_common_prefix(strs)
+  # need a way to compare characters in all the strings
+  # for matching
+  result = ""
+  dict = Hash.new(0)
+  strs[0].chars.each_with_index do |char, i|
+    dict[i] = {char => 0}
+  end
+
+  strs.each do |str|
+    str.chars.each_with_index do |c, i|
+      if i < strs[0].length
+        if c == dict[i].keys[0]
+          dict[i][c] +=1
+        end
+      end
+    end
+  end
+
+  dict.each_value do |char_pair| 
+    char_pair.each do |key, value| 
+      if value == strs.length
+        result += "#{key}"
+      end 
+    end
+  end
+  result
+end
