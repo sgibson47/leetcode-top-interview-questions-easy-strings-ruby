@@ -258,6 +258,8 @@ def longest_common_prefix(strs)
     char_pair.each do |key, value| 
       if value == strs.length
         result += "#{key}"
+      else
+        return result
       end 
     end
   end
