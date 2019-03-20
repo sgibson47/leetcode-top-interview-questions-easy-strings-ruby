@@ -324,4 +324,11 @@ describe "#longest_common_prefix" do
       expect(longest_common_prefix(strs)).to eq("")
     end
   end
+
+  describe "Example 4" do
+    it "returns '' even if there's a match later in strings" do 
+      strs = ["aca","cba"]
+      expect(longest_common_prefix(strs)).to eq("")
+    end
+  end
 end
