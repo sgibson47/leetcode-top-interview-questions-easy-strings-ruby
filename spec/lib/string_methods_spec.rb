@@ -136,7 +136,7 @@ describe "#is_palindrome" do
     end
   end
 
-  describe "Example 1" do
+  describe "Example 3" do
     it "returns whether t is an anagram of s" do 
       s = ""
       expect(is_palindrome(s)).to eq(true)
