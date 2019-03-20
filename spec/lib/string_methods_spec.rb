@@ -313,8 +313,8 @@ describe "#longest_common_prefix" do
 
   describe "Example 2" do
     it "returns '' if there is no common prefix" do 
-      strs = [["dog","racecar","car"]
-      expect(longest_common_prefix(last)).to eq("")
+      strs = ["dog","racecar","car"]
+      expect(longest_common_prefix(strs)).to eq("")
     end
   end
 end
